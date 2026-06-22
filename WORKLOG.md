@@ -1,5 +1,19 @@
 # Worklog
 
+## 2026-06-22
+
+### quick-edit — wire scroll/marker messages (ewcomments branch, Task B2)
+
+Imported `scrollToProseIndex`, `setCommentMarkers`, `applyCommentMarkers` from `./src/comments.js` into `quick-edit.js`.
+
+Added two `onMessage` branches:
+- `scroll-to-pos` → `scrollToProseIndex(e.data.proseIndex)`
+- `set-comment-markers` → `setCommentMarkers(e.data.markers, ctx)`
+
+Added `applyCommentMarkers(ctx)` call in `setBody` immediately after `await ctx.loadPage()` so cached markers are re-applied whenever the body is re-rendered.
+
+No new tests needed — B1 covers the comments.js logic. All 897 existing tests pass.
+
 ## 2026-05-28
 
 ### nx2/utils/api.js — consistency refactor (api-refactor branch)

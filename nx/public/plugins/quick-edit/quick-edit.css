@@ -271,3 +271,21 @@ da-palette {
 da-palette .da-palette-field {
   color: black;
 }
+
+.qe-comment-marker {
+  position: absolute;
+  left: -24px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  padding: 0;
+  border: none;
+  border-radius: 50% 50% 50% 2px;
+  background: #f8d904; /* spectrum yellow-300 */
+  cursor: pointer;
+  z-index: 2;
+}
+
+.qe-comment-marker:hover {
+  background: #e8c600;
+}
